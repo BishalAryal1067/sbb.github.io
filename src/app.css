@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --brand-color-dark: rgb(27, 27, 27);
+  --brand-color-light-gold: rgb(246, 212, 87);
+  --brand-color-semi-gold: rgb(201, 140, 53);
+  --brand-color-dark-gold: rgb(182, 108, 39);
+  --brand-logo-color: rgb(128, 205, 244);
+
+  --pallate-purple-dark: rgb(162, 148, 249);
+  --pallate-purple-extralight: rgb(245, 239, 255);
+
+  --font-family: "Rubik", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+}
+
+body {
+  background: var(--brand-color-dark);
+}
+
+.hero-section {
+  height: 100dvh;
+}
+
+.container {
+  position: relative;
+  height: 90dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .brand-tagline {
+  opacity: 0;
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(
+    45deg,
+    var(--brand-color-light-gold),
+    var(--brand-color-semi-gold)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.spikes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  blend-mode: multiply;
+}
