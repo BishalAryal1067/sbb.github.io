@@ -1,4 +1,3 @@
 <template>
-
-    this is a test file
+    Hello World
 </template>
