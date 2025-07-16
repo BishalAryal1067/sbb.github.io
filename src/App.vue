@@ -1,3 +1,8 @@
+<script setup>
+import GlobalLayout from "./layout/GlobalLayout.vue";
+</script>
+
+
 <template>
-    Hello World
+    <router-view />
 </template>
