@@ -13,35 +13,38 @@ import GlobalLayout from "../layout/GlobalLayout.vue";
         </template>
 
         <template #body>
-            <div class="w-full flex flex-col gap-4 items-center py-12 text-left">
-                <p class="text-2xl font-normal w-1/2">
+            <div class="w-full flex flex-col gap-4 items-center px-4 sm:px-0 py-12 text-left">
+                <p class="sm:text-2xl font-normal sm:w-1/2 text-center">
                     Sbb Advisory Solutions
                     is a firm established with a vision of helping business to navigate their way in this compitetive
                     world.We strategize and develop solutions specific to your business needs.
                 </p>
 
 
-                <p class="text-2xl font-normal w-1/2">
+                <p class="sm:text-2xl font-normal sm:w-1/2 text-center">
                     S.B.B is a forward-thinking consultancy firm delivering tailored legal, financial, and compliance
                     solutions to businesses across industries. With a diverse, experienced team and a deep understanding
                     of the business landscape, we empower organizations with clarity, control, and strategic direction.
                 </p>
 
-                <p class="text-2xl font-normal w-1/2">
+                <p class="sm:text-2xl font-normal sm:w-1/2 text-center">
                     From startups and scale-ups to NGOs and investment entities, we provide insightful, actionable, and
                     growth-focused advisory built to deliver results.
 
                 </p>
             </div>
-            <div class="w-full relative flex justify-center px-8 py-12 bg-gray-200">
+            <div class="w-full relative flex justify-center px-8 py-12 bg-gray-200 overflow-hidden">
                 <p class="absolute top-11/20 left-6/20 
-                    text-4xl
+                    text:xl
+                    sm:text-4xl
                     italic
-                    opacity-30
-                    font-bold text-transparent stroke-text text-stroke-light-gold pointer-events-none select-none">
+                    hidden
+                    sm:flex
+                    sm:opacity-30
+                    font-bold sm:text-transparent stroke-text text-stroke-light-gold pointer-events-none select-none">
                     EMPOWERING GROWTH THROUGH TAILORED SOLUTIONS
                 </p>
-                <p class="text-4xl font-bold italic text-dark-gold">
+                <p class="text-lg sm:text-4xl font-bold italic text-dark-gold text-center sm:text-start">
                     EMPOWERING GROWTH THROUGH TAILORED SOLUTIONS
                 </p>
             </div>

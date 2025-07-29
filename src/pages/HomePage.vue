@@ -11,7 +11,7 @@ import services from "../utils/../utils/services.js";
             <HeroSection />
         </template>
         <template #body>
-            <div class="w-screen sm:flexjustify-center gap-12 px-6 py-8 sm:py-16 sm:px-12">
+            <div class="w-screen flex flex-col sm:flex-row justify-center gap-12 px-6 py-8 sm:py-16 sm:px-12">
                 <div class="flex flex-col gap-2 w-[35rem] w-full">
                     <p class="text-3xl sm:text-6xl font-medium text-brand-yellow">What do we do ?</p>
                     <p class="text-gray-600 text-xl sm:text-2xl font-semibold max-w-screen">We work on variety of
