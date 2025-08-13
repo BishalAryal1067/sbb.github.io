@@ -1,35 +1,10 @@
 <script setup>
 import GlobalLayout from "../layout/GlobalLayout.vue";
-
-const importantInfo = [
-    {
-        title: "company registration",
-        links: [
-            {
-                title: "company registration guide",
-                type: "article",
-                url: "https://lawscholarsnepal.com/company-registration-in-nepal/"
-            }
-        ]
-    },
-    {
-        title: "Taxation",
-        links: [
-            {
-                title: "company registration guide",
-                type: "article",
-                url: "https://lawscholarsnepal.com/company-registration-in-nepal/"
-            }
-        ]
-    },
-
-
-
-]
+import links from "../constants/links.js";
+import articles from "../constants/articles.js";
+import videos from "../constants/youtube.js";
 
 </script>
-
-
 
 <template>
     <GlobalLayout>
@@ -44,20 +19,44 @@ const importantInfo = [
         </template>
 
         <template #body>
-            <div class="flex flex-col px-12 py-6 min-h-[65rem] gap-6">
-                <div v-for="(item, id) in importantInfo" :key="id + item.title" class="w-full flex flex-col gap-4">
-                    <p class="text-3xl text-brand-yellow font-semibold">{{ item.title }}</p>
-                    <div v-for="(item, id) in (item.links)" :key="id" class="w-full flex justify-between">
-                        <span class="capitalize font-semibold text-xl">{{ item.title }} </span>
-                        <span class="block w-3 h-3 rounded-[50%] bg-gray-300"></span>
-                        <span class="capitalize font-semibold text-xl">{{ item.type }} </span>
-                        <span class="block w-3 h-3 rounded-[50%] bg-gray-300"></span>
-                        <a :href="item.url" target="_blank" class="text-xl">
-                            <i class="fa-solid fa-link"></i>
+            <div class="flex flex-col px-12 py-6 min-h-[45rem] gap-6">
+                <!--articles-->
+                <div class="w-full">
+                    <p class="font-semibold text-2xl text-center">Article and Blog Sites</p>
+                    <div class="flex flex-wrap gap-6 justify-center mt-2">
+                        <a :src="article.url" frameborder="0" v-for="article in articles" :key="article.title"
+                            target="_blank"
+                            class="border border-gray-400 px-4 py-2 cursor-pointer rounded-sm flex gap-2 items-center">
+                            <img src="../assets/pdf-icon.png" alt="Emblem_of_Nepal" class="w-10">
+                            <span class="block text-brand-yellow font-semibold"> {{ article.title }} </span>
                         </a>
                     </div>
                 </div>
+
+                <div class="w-full">
+                    <p class="font-semibold text-2xl text-center">Useful Videos</p>
+                    <div class="flex flex-wrap gap-6 justify-center mt-2">
+                        <a :src="video.url" frameborder="0" v-for="video in videos" :key="video.title" target="_blank"
+                            class="border border-gray-400 px-4 py-2 cursor-pointer rounded-sm flex gap-2 items-center">
+                            <img src="../assets/pdf-icon.png" alt="Emblem_of_Nepal" class="w-10">
+                            <span class="block text-brand-yellow font-semibold"> {{ video.title }} </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <p class="font-semibold text-2xl text-center mt-4">Useful Links</p>
+                    <div class="flex flex-wrap gap-6 justify-center mt-2">
+                        <a v-for="(link, index) in links" :href="link.url" :key="`index-${link}`" target="_blank"
+                            class="border border-gray-400 px-4 py-2 rounded-sm flex gap-2 items-center">
+                            <img src="../assets/Emblem_of_Nepal.png" alt="Emblem_of_Nepal" class="w-10">
+                            <span class="block text-brand-yellow font-semibold">{{ link.title }}</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+
+
         </template>
     </GlobalLayout>
 </template>
