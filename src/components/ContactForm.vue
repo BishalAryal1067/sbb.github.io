@@ -34,23 +34,23 @@ const onSubmit = () => {
     <form class="flex flex-col gap-4 pt-12" @submit.prevent="onSubmit">
         <div class="flex flex-col gap-2">
             <label class="sm:text-lg text-brand-dark font-semibold">Full name</label>
-            <input class="border border-brand-yellow rounded-sm text-lg px-4 py-2 min-w-[25rem]" type="text"
+            <input class="border border-blue-500 rounded-sm text-lg px-4 py-2 min-w-[25rem]" type="text"
                 v-model="form.fullName" />
         </div>
         <div class="flex flex-col">
             <label class="sm:text-lg text-brand-dark font-semibold">Email</label>
-            <input class="border border-brand-yellow rounded-sm text-lg px-4 py-2" type="text" v-model="form.email" />
+            <input class="border border-blue-500 rounded-sm text-lg px-4 py-2" type="text" v-model="form.email" />
         </div>
         <div class="flex flex-col">
             <label class="sm:text-lg text-brand-dark font-semibold">Contact Number</label>
-            <input class="border border-brand-yellow rounded-sm text-lg px-4 py-2" type="text" v-model="form.contact" />
+            <input class="border border-blue-500 rounded-sm text-lg px-4 py-2" type="text" v-model="form.contact" />
         </div>
         <div class="flex flex-col">
             <label class="sm:text-lg text-brand-dark font-semibold">Message</label>
-            <textarea class="border border-brand-yellow rounded-sm text-lg px-4 py-2" rows="5" v-model="form.message" />
+            <textarea class="border border-blue-500 rounded-sm text-lg px-4 py-2" rows="5" v-model="form.message" />
         </div>
         <div
-            class="bg-brand-yellow rounded-sm w-fit px-8 py-2 cursor-pointer sm:px-12 sm:py-4 text-white sm:text-lg font-semibold">
+            class="bg-blue-500 rounded-sm w-fit px-8 py-2 cursor-pointer sm:px-12 sm:py-4 text-white sm:text-lg font-semibold">
             <input type="submit" value="Submit" />
         </div>
     </form>

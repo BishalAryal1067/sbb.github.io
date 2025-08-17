@@ -5,7 +5,7 @@ import FooterSection from "../components/FooterSection.vue";
 
 <template>
     <NavigationBar />
-    <div class="w-full bg-brand-dark">
+    <div class="w-full bg-brand-dark overflow-hidden">
         <slot name="top"></slot>
     </div>
     <div>

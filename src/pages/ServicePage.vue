@@ -34,9 +34,9 @@ watch(activeService, (service) => {
     <GlobalLayout>
         <template #top>
             <div class="w-full h-fit bg-brand-dark pt-[10rem] pb-12 ps-8">
-                <p class="w-fit text-lg py-1 text-light-gold font-normal">Our services
+                <p class="w-fit text-lg py-1 text-light-gold font-normal">our services
                 </p>
-                <p class="mt-4 text-4xl font-semibold text-light-gold border-s-2 ps-4">Services we provide</p>
+                <p class="mt-4 text-4xl font-semibold text-light-gold border-s-2 ps-4">services we provide</p>
             </div>
         </template>
 

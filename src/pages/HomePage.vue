@@ -83,7 +83,7 @@ import services from "../utils/../utils/services.js";
                         items-center text-center gap-4 border 
                         rounded-sm border-brand-yellow p-4
                         transition-all hover:bg-brand-yellow hover:scale-92 group">
-                        <img src="../assets/reliable.svg" class="object-contain w-40 h-20">
+                        <img src="../assets/investment-data.svg" class="object-contain w-40 h-20">
                         <p class="text-lg sm:text-2xl font-semibold text-brand-yellow group-hover:text-white">
                             Outcome-Oriented
                             Approach</p>

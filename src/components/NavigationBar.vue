@@ -10,7 +10,7 @@ const isMenuOpen = ref(false);
 
 const backgroundString = computed(() => {
     if (route.path !== "/") return "bg-brand-dark";
-    return "bg-transparent";
+    return "bg-brand-dark";
 });
 
 function toggleMenu() {
@@ -49,7 +49,7 @@ watch(isMenuOpen, (open) => {
 </script>
 
 <template>
-    <nav :class="['absolute w-screen top-0 left-0 z-30', backgroundString]">
+    <nav :class="['sticky w-screen top-0 left-0 z-30 py-2', backgroundString]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
