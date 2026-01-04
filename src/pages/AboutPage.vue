@@ -8,7 +8,7 @@ import GlobalLayout from "../layout/GlobalLayout.vue";
         <template #top>
             <div class="w-full h-fit bg-brand-dark pt-[10rem] pb-12 ps-8">
                 <p class="w-fit px-6 py-4 border border-light-gold rounded-4xl text-light-gold font-normal">About Us</p>
-                <p class="mt-4 text-4xl font-semibold text-light-gold border-s-2 ps-4">Intoduction, values & vision</p>
+                <p class="mt-4 text-4xl font-semibold text-light-gold border-s-2 ps-4">Introduction, values & vision</p>
             </div>
         </template>
 
