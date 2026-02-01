@@ -1,6 +1,6 @@
 <script setup>
-import { reactive, computed } from "vue";
-import sendMessage from "../utils/sendEmail.js"
+import { reactive, computed, ref } from "vue";
+import sendMessage from "../utils/sendEmail.js";
 
 const form = reactive({
     fullName: '',
@@ -9,10 +9,41 @@ const form = reactive({
     message: '',
 });
 
-const onSubmit = async() => {
-      const { fullName, email, contact, message } = form
-      await sendMessage(fullName, email, contact, message)
+const toastInfo = ref(null);
+const formSubmitStatus = ref("initial");
+
+
+const clearForm = ()=> {
+  form.fullName = '';
+  form.email = '';
+  form.contact = '';
+  form.message = '';
 }
+
+const onSubmit = async() => {
+      formSubmitStatus.value = "loading";
+      try{
+        const { fullName, email, contact, message } = form
+        await sendMessage(fullName, email, contact, message);
+        formSubmitStatus.value = "success"
+        setTimeout(()=> {
+          clearForm();
+        }, 2000)
+      }
+      catch(err) {
+        formSubmitStatus.value = "error"
+      }
+      finally {
+        setTimeout(()=> formSubmitStatus.value ="initial", 2000)
+      }
+}
+
+const sumbitButtonInfo = computed(()=> {
+  if (formSubmitStatus.value == "loading") return "Loading ...";
+  if (formSubmitStatus.value == "success") return "Success";
+  if (formSubmitStatus.vlaue == "error") return "Failed"
+  return "Submit"
+})
 
 const handleInput = (event)=> {
     form.contact = event.target.value.replace(/\D/g, "").slice(0, 10)
@@ -72,8 +103,19 @@ const handleInput = (event)=> {
               required
             />
         </div>
-        <input type="submit" value="Submit" 
-        class="bg-blue-500 py-4 rounded-md cursor-pointer text-white font-semibold"/>
+        <button type="submit" 
+        :disabled="formSubmitStatus != 'initial'"
+        class="bg-blue-500 py-4 rounded-md cursor-pointer text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+        :class="[
+            {'bg-green-500' : formSubmitStatus == 'success'},
+            {'bg-red-400' : fromSubmitStatus == 'error'}
+         ]"
+        >
+         {{ sumbitButtonInfo }}
+        </button>
     </form>
-
 </template>
+
+<style scoped>
+
+</style>
